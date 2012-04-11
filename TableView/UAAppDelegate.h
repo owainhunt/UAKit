@@ -11,5 +11,11 @@
 @interface UAAppDelegate : NSObject <NSApplicationDelegate>
 
 @property (assign) IBOutlet NSWindow *window;
+@property (strong) NSMutableArray *viewControllers;
+@property (assign) int visibleViewControllerIndex;
+
+- (IBAction)popTableView:(id)sender;
+- (void)tableWithIndex:(NSInteger)tableIndex;
+- (void)didSelectRowWithObject:(id)object;
 
 @end
