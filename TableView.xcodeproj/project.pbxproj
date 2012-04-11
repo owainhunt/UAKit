@@ -14,8 +14,9 @@
 		CC4E004A153383BD0087DC28 /* UAAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CC4E0049153383BD0087DC28 /* UAAppDelegate.m */; };
 		CC4E004D153383BE0087DC28 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = CC4E004B153383BE0087DC28 /* MainMenu.xib */; };
 		CC4E0059153387290087DC28 /* UATableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CC4E0058153387290087DC28 /* UATableViewCell.m */; };
+		CCC3E15215361678007EE559 /* UATableView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CCC3E15115361678007EE559 /* UATableView.xib */; };
+		CCC3E15515361E0D007EE559 /* UANavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = CCC3E15415361E0D007EE559 /* UANavigationController.m */; };
 		CCDC21DC15348EBF00EAD1BF /* UATableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CCDC21DA15348EBF00EAD1BF /* UATableViewController.m */; };
-		CCDC21DD15348EBF00EAD1BF /* UATableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CCDC21DB15348EBF00EAD1BF /* UATableViewController.xib */; };
 		CCDC21E01534915900EAD1BF /* UAView.m in Sources */ = {isa = PBXBuildFile; fileRef = CCDC21DF1534915900EAD1BF /* UAView.m */; };
 		CCDC21E51534A22300EAD1BF /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CCDC21E41534A22300EAD1BF /* QuartzCore.framework */; };
 /* End PBXBuildFile section */
@@ -36,9 +37,11 @@
 		CC4E004C153383BE0087DC28 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		CC4E0057153387290087DC28 /* UATableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UATableViewCell.h; sourceTree = "<group>"; };
 		CC4E0058153387290087DC28 /* UATableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UATableViewCell.m; sourceTree = "<group>"; };
+		CCC3E15115361678007EE559 /* UATableView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UATableView.xib; sourceTree = "<group>"; };
+		CCC3E15315361E0C007EE559 /* UANavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UANavigationController.h; sourceTree = "<group>"; };
+		CCC3E15415361E0D007EE559 /* UANavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UANavigationController.m; sourceTree = "<group>"; };
 		CCDC21D915348EBF00EAD1BF /* UATableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UATableViewController.h; sourceTree = "<group>"; };
 		CCDC21DA15348EBF00EAD1BF /* UATableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UATableViewController.m; sourceTree = "<group>"; };
-		CCDC21DB15348EBF00EAD1BF /* UATableViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UATableViewController.xib; sourceTree = "<group>"; };
 		CCDC21DE1534915900EAD1BF /* UAView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UAView.h; sourceTree = "<group>"; };
 		CCDC21DF1534915900EAD1BF /* UAView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UAView.m; sourceTree = "<group>"; };
 		CCDC21E41534A22300EAD1BF /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
@@ -99,9 +102,11 @@
 			children = (
 				CC4E0048153383BD0087DC28 /* UAAppDelegate.h */,
 				CC4E0049153383BD0087DC28 /* UAAppDelegate.m */,
+				CCC3E15315361E0C007EE559 /* UANavigationController.h */,
+				CCC3E15415361E0D007EE559 /* UANavigationController.m */,
 				CCDC21D915348EBF00EAD1BF /* UATableViewController.h */,
 				CCDC21DA15348EBF00EAD1BF /* UATableViewController.m */,
-				CCDC21DB15348EBF00EAD1BF /* UATableViewController.xib */,
+				CCC3E15115361678007EE559 /* UATableView.xib */,
 				CCDC21DE1534915900EAD1BF /* UAView.h */,
 				CCDC21DF1534915900EAD1BF /* UAView.m */,
 				CC4E0057153387290087DC28 /* UATableViewCell.h */,
@@ -179,7 +184,7 @@
 				CC4E0041153383BD0087DC28 /* InfoPlist.strings in Resources */,
 				CC4E0047153383BD0087DC28 /* Credits.rtf in Resources */,
 				CC4E004D153383BE0087DC28 /* MainMenu.xib in Resources */,
-				CCDC21DD15348EBF00EAD1BF /* UATableViewController.xib in Resources */,
+				CCC3E15215361678007EE559 /* UATableView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -195,6 +200,7 @@
 				CC4E0059153387290087DC28 /* UATableViewCell.m in Sources */,
 				CCDC21DC15348EBF00EAD1BF /* UATableViewController.m in Sources */,
 				CCDC21E01534915900EAD1BF /* UAView.m in Sources */,
+				CCC3E15515361E0D007EE559 /* UANavigationController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

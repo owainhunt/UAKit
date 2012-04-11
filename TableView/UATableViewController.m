@@ -17,6 +17,8 @@
 
 @synthesize delegate = _delegate;
 @synthesize tableView = _tableView;
+@synthesize titleField = _titleField;
+@synthesize backButton = _backButton;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -34,6 +36,14 @@
     [super loadView];
     [self.tableView setDataSource:self];
     [self.tableView setDelegate:self];
+    [self.tableView setTarget:self];
+    [self.tableView setDoubleAction:@selector(doubleClicked)];
+}
+
+
+- (void)doubleClicked
+{
+    [self.delegate didSelectRowWithObject:[self representedObjectForCellAtRow:[self.tableView clickedRow]]];
 }
 
 
@@ -69,7 +79,13 @@
 
 - (void)tableViewSelectionDidChange:(NSNotification *)notification
 {
-    [self.delegate didSelectRowWithObject:[self representedObjectForCellAtRow:self.tableView.selectedRow]];
+    //[self.delegate didSelectRowWithObject:[self representedObjectForCellAtRow:self.tableView.selectedRow]];
+}
+
+
+- (void)backButtonPressed:(id)sender
+{
+    [self.delegate popTableView];
 }
 
 
