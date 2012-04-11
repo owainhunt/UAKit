@@ -9,9 +9,20 @@
 #import <Cocoa/Cocoa.h>
 #import "UAAppDelegate.h"
 
+@protocol UATableViewControllerDelegate <NSObject>
+
+- (void)didSelectRowWithObject:(id)obj;
+- (void)popTableView;
+
+@end
+
 @interface UATableViewController : NSViewController <NSTableViewDelegate, NSTableViewDataSource>
 
-@property UAAppDelegate *delegate;
+@property id<UATableViewControllerDelegate> delegate;
 @property (strong) IBOutlet NSTableView *tableView;
+@property (strong) IBOutlet NSTextField *titleField;
+@property (strong) IBOutlet NSButton *backButton;
+
+- (IBAction)backButtonPressed:(id)sender;
 
 @end
