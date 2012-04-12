@@ -9,15 +9,16 @@
 /* Begin PBXBuildFile section */
 		CC52FECE15377953005A767A /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CC4E0036153383BD0087DC28 /* Cocoa.framework */; };
 		CC52FED415377953005A767A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = CC52FED215377953005A767A /* InfoPlist.strings */; };
-		CC52FEDC15377999005A767A /* UANavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = CCC3E15415361E0D007EE559 /* UANavigationController.m */; };
-		CC52FEDD15377999005A767A /* UATableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CCDC21DA15348EBF00EAD1BF /* UATableViewController.m */; };
-		CC52FEDE15377999005A767A /* UAView.m in Sources */ = {isa = PBXBuildFile; fileRef = CCDC21DF1534915900EAD1BF /* UAView.m */; };
-		CC52FEDF15377999005A767A /* UATableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CC4E0058153387290087DC28 /* UATableViewCell.m */; };
-		CC52FEE0153779A5005A767A /* UANavigationController.h in Headers */ = {isa = PBXBuildFile; fileRef = CCC3E15315361E0C007EE559 /* UANavigationController.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		CC52FEE1153779A5005A767A /* UATableViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = CCDC21D915348EBF00EAD1BF /* UATableViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		CC52FEE2153779A5005A767A /* UAView.h in Headers */ = {isa = PBXBuildFile; fileRef = CCDC21DE1534915900EAD1BF /* UAView.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		CC52FEE3153779A5005A767A /* UATableViewCell.h in Headers */ = {isa = PBXBuildFile; fileRef = CC4E0057153387290087DC28 /* UATableViewCell.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		CC52FEE4153779A5005A767A /* UAKit.h in Headers */ = {isa = PBXBuildFile; fileRef = CC52FED615377953005A767A /* UAKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CC52FEF215377EFA005A767A /* UATableNavigationController.h in Headers */ = {isa = PBXBuildFile; fileRef = CC52FEE915377EFA005A767A /* UATableNavigationController.h */; };
+		CC52FEF315377EFA005A767A /* UATableNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = CC52FEEA15377EFA005A767A /* UATableNavigationController.m */; };
+		CC52FEF415377EFA005A767A /* UATableView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CC52FEEB15377EFA005A767A /* UATableView.xib */; };
+		CC52FEF515377EFA005A767A /* UATableViewCell.h in Headers */ = {isa = PBXBuildFile; fileRef = CC52FEEC15377EFA005A767A /* UATableViewCell.h */; };
+		CC52FEF615377EFA005A767A /* UATableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CC52FEED15377EFA005A767A /* UATableViewCell.m */; };
+		CC52FEF715377EFA005A767A /* UATableViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = CC52FEEE15377EFA005A767A /* UATableViewController.h */; };
+		CC52FEF815377EFA005A767A /* UATableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CC52FEEF15377EFA005A767A /* UATableViewController.m */; };
+		CC52FEF915377EFA005A767A /* UAView.h in Headers */ = {isa = PBXBuildFile; fileRef = CC52FEF015377EFA005A767A /* UAView.h */; };
+		CC52FEFA15377EFA005A767A /* UAView.m in Sources */ = {isa = PBXBuildFile; fileRef = CC52FEF115377EFA005A767A /* UAView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,20 +26,20 @@
 		CC4E0039153383BD0087DC28 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
 		CC4E003A153383BD0087DC28 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		CC4E003B153383BD0087DC28 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		CC4E0057153387290087DC28 /* UATableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UATableViewCell.h; sourceTree = "<group>"; };
-		CC4E0058153387290087DC28 /* UATableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UATableViewCell.m; sourceTree = "<group>"; };
 		CC52FECD15377953005A767A /* UAKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = UAKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CC52FED115377953005A767A /* UAKit-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "UAKit-Info.plist"; sourceTree = "<group>"; };
 		CC52FED315377953005A767A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		CC52FED515377953005A767A /* UAKit-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UAKit-Prefix.pch"; sourceTree = "<group>"; };
 		CC52FED615377953005A767A /* UAKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UAKit.h; sourceTree = "<group>"; };
-		CCC3E15115361678007EE559 /* UATableView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UATableView.xib; sourceTree = "<group>"; };
-		CCC3E15315361E0C007EE559 /* UANavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UANavigationController.h; sourceTree = "<group>"; };
-		CCC3E15415361E0D007EE559 /* UANavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UANavigationController.m; sourceTree = "<group>"; };
-		CCDC21D915348EBF00EAD1BF /* UATableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UATableViewController.h; sourceTree = "<group>"; };
-		CCDC21DA15348EBF00EAD1BF /* UATableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UATableViewController.m; sourceTree = "<group>"; };
-		CCDC21DE1534915900EAD1BF /* UAView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UAView.h; sourceTree = "<group>"; };
-		CCDC21DF1534915900EAD1BF /* UAView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UAView.m; sourceTree = "<group>"; };
+		CC52FEE915377EFA005A767A /* UATableNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UATableNavigationController.h; sourceTree = "<group>"; };
+		CC52FEEA15377EFA005A767A /* UATableNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UATableNavigationController.m; sourceTree = "<group>"; };
+		CC52FEEB15377EFA005A767A /* UATableView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UATableView.xib; sourceTree = "<group>"; };
+		CC52FEEC15377EFA005A767A /* UATableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UATableViewCell.h; sourceTree = "<group>"; };
+		CC52FEED15377EFA005A767A /* UATableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UATableViewCell.m; sourceTree = "<group>"; };
+		CC52FEEE15377EFA005A767A /* UATableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UATableViewController.h; sourceTree = "<group>"; };
+		CC52FEEF15377EFA005A767A /* UATableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UATableViewController.m; sourceTree = "<group>"; };
+		CC52FEF015377EFA005A767A /* UAView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UAView.h; sourceTree = "<group>"; };
+		CC52FEF115377EFA005A767A /* UAView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UAView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,7 +57,6 @@
 		CC4E0027153383BD0087DC28 = {
 			isa = PBXGroup;
 			children = (
-				CC4E003C153383BD0087DC28 /* TableView */,
 				CC52FECF15377953005A767A /* UAKit */,
 				CC4E0035153383BD0087DC28 /* Frameworks */,
 				CC4E0033153383BD0087DC28 /* Products */,
@@ -90,33 +90,10 @@
 			name = "Other Frameworks";
 			sourceTree = "<group>";
 		};
-		CC4E003C153383BD0087DC28 /* TableView */ = {
-			isa = PBXGroup;
-			children = (
-				CCC3E15315361E0C007EE559 /* UANavigationController.h */,
-				CCC3E15415361E0D007EE559 /* UANavigationController.m */,
-				CCDC21D915348EBF00EAD1BF /* UATableViewController.h */,
-				CCDC21DA15348EBF00EAD1BF /* UATableViewController.m */,
-				CCC3E15115361678007EE559 /* UATableView.xib */,
-				CCDC21DE1534915900EAD1BF /* UAView.h */,
-				CCDC21DF1534915900EAD1BF /* UAView.m */,
-				CC4E0057153387290087DC28 /* UATableViewCell.h */,
-				CC4E0058153387290087DC28 /* UATableViewCell.m */,
-				CC4E003D153383BD0087DC28 /* Supporting Files */,
-			);
-			path = TableView;
-			sourceTree = "<group>";
-		};
-		CC4E003D153383BD0087DC28 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
 		CC52FECF15377953005A767A /* UAKit */ = {
 			isa = PBXGroup;
 			children = (
+				CC52FEFB15377F07005A767A /* UANavigationController */,
 				CC52FED615377953005A767A /* UAKit.h */,
 				CC52FED015377953005A767A /* Supporting Files */,
 			);
@@ -133,6 +110,22 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		CC52FEFB15377F07005A767A /* UANavigationController */ = {
+			isa = PBXGroup;
+			children = (
+				CC52FEE915377EFA005A767A /* UATableNavigationController.h */,
+				CC52FEEA15377EFA005A767A /* UATableNavigationController.m */,
+				CC52FEEB15377EFA005A767A /* UATableView.xib */,
+				CC52FEEC15377EFA005A767A /* UATableViewCell.h */,
+				CC52FEED15377EFA005A767A /* UATableViewCell.m */,
+				CC52FEEE15377EFA005A767A /* UATableViewController.h */,
+				CC52FEEF15377EFA005A767A /* UATableViewController.m */,
+				CC52FEF015377EFA005A767A /* UAView.h */,
+				CC52FEF115377EFA005A767A /* UAView.m */,
+			);
+			name = UANavigationController;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -140,11 +133,11 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CC52FEE0153779A5005A767A /* UANavigationController.h in Headers */,
-				CC52FEE1153779A5005A767A /* UATableViewController.h in Headers */,
-				CC52FEE2153779A5005A767A /* UAView.h in Headers */,
-				CC52FEE3153779A5005A767A /* UATableViewCell.h in Headers */,
 				CC52FEE4153779A5005A767A /* UAKit.h in Headers */,
+				CC52FEF215377EFA005A767A /* UATableNavigationController.h in Headers */,
+				CC52FEF515377EFA005A767A /* UATableViewCell.h in Headers */,
+				CC52FEF715377EFA005A767A /* UATableViewController.h in Headers */,
+				CC52FEF915377EFA005A767A /* UAView.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -202,6 +195,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CC52FED415377953005A767A /* InfoPlist.strings in Resources */,
+				CC52FEF415377EFA005A767A /* UATableView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -212,10 +206,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CC52FEDC15377999005A767A /* UANavigationController.m in Sources */,
-				CC52FEDD15377999005A767A /* UATableViewController.m in Sources */,
-				CC52FEDE15377999005A767A /* UAView.m in Sources */,
-				CC52FEDF15377999005A767A /* UATableViewCell.m in Sources */,
+				CC52FEF315377EFA005A767A /* UATableNavigationController.m in Sources */,
+				CC52FEF615377EFA005A767A /* UATableViewCell.m in Sources */,
+				CC52FEF815377EFA005A767A /* UATableViewController.m in Sources */,
+				CC52FEFA15377EFA005A767A /* UAView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -327,6 +321,7 @@
 				CC52FEDB15377953005A767A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

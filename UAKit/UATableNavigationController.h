@@ -1,6 +1,6 @@
 //
 //  UANavigationController.h
-//  TableView
+//  UAKit
 //
 //  Created by Owain Hunt on 11/04/2012.
 //  Copyright (c) 2012 Owain R Hunt. All rights reserved.
@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 #import "UATableViewController.h"
 
-@interface UANavigationController : NSObject <UATableViewControllerDelegate>
+@interface UATableNavigationController : NSObject <UATableViewControllerDelegate>
 
 @property (strong) NSMutableArray *viewControllers;
 @property (assign) int visibleViewControllerIndex;
