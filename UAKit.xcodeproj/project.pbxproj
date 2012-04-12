@@ -1,0 +1,329 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		CC52FECE15377953005A767A /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CC4E0036153383BD0087DC28 /* Cocoa.framework */; };
+		CC52FED415377953005A767A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = CC52FED215377953005A767A /* InfoPlist.strings */; };
+		CC52FEE4153779A5005A767A /* UAKit.h in Headers */ = {isa = PBXBuildFile; fileRef = CC52FED615377953005A767A /* UAKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CC52FEF215377EFA005A767A /* UATableNavigationController.h in Headers */ = {isa = PBXBuildFile; fileRef = CC52FEE915377EFA005A767A /* UATableNavigationController.h */; };
+		CC52FEF315377EFA005A767A /* UATableNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = CC52FEEA15377EFA005A767A /* UATableNavigationController.m */; };
+		CC52FEF415377EFA005A767A /* UATableView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CC52FEEB15377EFA005A767A /* UATableView.xib */; };
+		CC52FEF515377EFA005A767A /* UATableViewCell.h in Headers */ = {isa = PBXBuildFile; fileRef = CC52FEEC15377EFA005A767A /* UATableViewCell.h */; };
+		CC52FEF615377EFA005A767A /* UATableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CC52FEED15377EFA005A767A /* UATableViewCell.m */; };
+		CC52FEF715377EFA005A767A /* UATableViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = CC52FEEE15377EFA005A767A /* UATableViewController.h */; };
+		CC52FEF815377EFA005A767A /* UATableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CC52FEEF15377EFA005A767A /* UATableViewController.m */; };
+		CC52FEF915377EFA005A767A /* UAView.h in Headers */ = {isa = PBXBuildFile; fileRef = CC52FEF015377EFA005A767A /* UAView.h */; };
+		CC52FEFA15377EFA005A767A /* UAView.m in Sources */ = {isa = PBXBuildFile; fileRef = CC52FEF115377EFA005A767A /* UAView.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		CC4E0036153383BD0087DC28 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		CC4E0039153383BD0087DC28 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		CC4E003A153383BD0087DC28 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		CC4E003B153383BD0087DC28 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		CC52FECD15377953005A767A /* UAKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = UAKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CC52FED115377953005A767A /* UAKit-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "UAKit-Info.plist"; sourceTree = "<group>"; };
+		CC52FED315377953005A767A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		CC52FED515377953005A767A /* UAKit-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UAKit-Prefix.pch"; sourceTree = "<group>"; };
+		CC52FED615377953005A767A /* UAKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UAKit.h; sourceTree = "<group>"; };
+		CC52FEE915377EFA005A767A /* UATableNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UATableNavigationController.h; sourceTree = "<group>"; };
+		CC52FEEA15377EFA005A767A /* UATableNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UATableNavigationController.m; sourceTree = "<group>"; };
+		CC52FEEB15377EFA005A767A /* UATableView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UATableView.xib; sourceTree = "<group>"; };
+		CC52FEEC15377EFA005A767A /* UATableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UATableViewCell.h; sourceTree = "<group>"; };
+		CC52FEED15377EFA005A767A /* UATableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UATableViewCell.m; sourceTree = "<group>"; };
+		CC52FEEE15377EFA005A767A /* UATableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UATableViewController.h; sourceTree = "<group>"; };
+		CC52FEEF15377EFA005A767A /* UATableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UATableViewController.m; sourceTree = "<group>"; };
+		CC52FEF015377EFA005A767A /* UAView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UAView.h; sourceTree = "<group>"; };
+		CC52FEF115377EFA005A767A /* UAView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UAView.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		CC52FEC915377953005A767A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CC52FECE15377953005A767A /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		CC4E0027153383BD0087DC28 = {
+			isa = PBXGroup;
+			children = (
+				CC52FECF15377953005A767A /* UAKit */,
+				CC4E0035153383BD0087DC28 /* Frameworks */,
+				CC4E0033153383BD0087DC28 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		CC4E0033153383BD0087DC28 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CC52FECD15377953005A767A /* UAKit.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CC4E0035153383BD0087DC28 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CC4E0036153383BD0087DC28 /* Cocoa.framework */,
+				CC4E0038153383BD0087DC28 /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CC4E0038153383BD0087DC28 /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CC4E0039153383BD0087DC28 /* AppKit.framework */,
+				CC4E003A153383BD0087DC28 /* CoreData.framework */,
+				CC4E003B153383BD0087DC28 /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		CC52FECF15377953005A767A /* UAKit */ = {
+			isa = PBXGroup;
+			children = (
+				CC52FEFB15377F07005A767A /* UANavigationController */,
+				CC52FED615377953005A767A /* UAKit.h */,
+				CC52FED015377953005A767A /* Supporting Files */,
+			);
+			path = UAKit;
+			sourceTree = "<group>";
+		};
+		CC52FED015377953005A767A /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				CC52FED115377953005A767A /* UAKit-Info.plist */,
+				CC52FED215377953005A767A /* InfoPlist.strings */,
+				CC52FED515377953005A767A /* UAKit-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		CC52FEFB15377F07005A767A /* UANavigationController */ = {
+			isa = PBXGroup;
+			children = (
+				CC52FEE915377EFA005A767A /* UATableNavigationController.h */,
+				CC52FEEA15377EFA005A767A /* UATableNavigationController.m */,
+				CC52FEEB15377EFA005A767A /* UATableView.xib */,
+				CC52FEEC15377EFA005A767A /* UATableViewCell.h */,
+				CC52FEED15377EFA005A767A /* UATableViewCell.m */,
+				CC52FEEE15377EFA005A767A /* UATableViewController.h */,
+				CC52FEEF15377EFA005A767A /* UATableViewController.m */,
+				CC52FEF015377EFA005A767A /* UAView.h */,
+				CC52FEF115377EFA005A767A /* UAView.m */,
+			);
+			name = UANavigationController;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		CC52FECA15377953005A767A /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CC52FEE4153779A5005A767A /* UAKit.h in Headers */,
+				CC52FEF215377EFA005A767A /* UATableNavigationController.h in Headers */,
+				CC52FEF515377EFA005A767A /* UATableViewCell.h in Headers */,
+				CC52FEF715377EFA005A767A /* UATableViewController.h in Headers */,
+				CC52FEF915377EFA005A767A /* UAView.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		CC52FECC15377953005A767A /* UAKit */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CC52FED915377953005A767A /* Build configuration list for PBXNativeTarget "UAKit" */;
+			buildPhases = (
+				CC52FEC815377953005A767A /* Sources */,
+				CC52FEC915377953005A767A /* Frameworks */,
+				CC52FECA15377953005A767A /* Headers */,
+				CC52FECB15377953005A767A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = UAKit;
+			productName = UAKit;
+			productReference = CC52FECD15377953005A767A /* UAKit.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		CC4E0029153383BD0087DC28 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = UA;
+				LastUpgradeCheck = 0430;
+				ORGANIZATIONNAME = "Owain R Hunt";
+			};
+			buildConfigurationList = CC4E002C153383BD0087DC28 /* Build configuration list for PBXProject "UAKit" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = CC4E0027153383BD0087DC28;
+			productRefGroup = CC4E0033153383BD0087DC28 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				CC52FECC15377953005A767A /* UAKit */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		CC52FECB15377953005A767A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CC52FED415377953005A767A /* InfoPlist.strings in Resources */,
+				CC52FEF415377EFA005A767A /* UATableView.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		CC52FEC815377953005A767A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CC52FEF315377EFA005A767A /* UATableNavigationController.m in Sources */,
+				CC52FEF615377EFA005A767A /* UATableViewCell.m in Sources */,
+				CC52FEF815377EFA005A767A /* UATableViewController.m in Sources */,
+				CC52FEFA15377EFA005A767A /* UAView.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		CC52FED215377953005A767A /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CC52FED315377953005A767A /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		CC4E004E153383BE0087DC28 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		CC4E004F153383BE0087DC28 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		CC52FEDA15377953005A767A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				FRAMEWORK_VERSION = A;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "UAKit/UAKit-Prefix.pch";
+				INFOPLIST_FILE = "UAKit/UAKit-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = framework;
+			};
+			name = Debug;
+		};
+		CC52FEDB15377953005A767A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				FRAMEWORK_VERSION = A;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "UAKit/UAKit-Prefix.pch";
+				INFOPLIST_FILE = "UAKit/UAKit-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = framework;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		CC4E002C153383BD0087DC28 /* Build configuration list for PBXProject "UAKit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CC4E004E153383BE0087DC28 /* Debug */,
+				CC4E004F153383BE0087DC28 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CC52FED915377953005A767A /* Build configuration list for PBXNativeTarget "UAKit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CC52FEDA15377953005A767A /* Debug */,
+				CC52FEDB15377953005A767A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = CC4E0029153383BD0087DC28 /* Project object */;
+}

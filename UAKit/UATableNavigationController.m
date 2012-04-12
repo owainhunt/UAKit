@@ -1,15 +1,15 @@
 //
 //  UANavigationController.m
-//  TableView
+//  UAKit
 //
 //  Created by Owain Hunt on 11/04/2012.
 //  Copyright (c) 2012 Owain R Hunt. All rights reserved.
 //
 
-#import "UANavigationController.h"
+#import "UATableNavigationController.h"
 #import "UATableViewController.h"
 
-@implementation UANavigationController
+@implementation UATableNavigationController
 
 @synthesize viewControllers = _viewControllers;
 @synthesize visibleViewControllerIndex = _visibleViewControllerIndex;
