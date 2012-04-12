@@ -18,7 +18,6 @@
 		CCC3E15515361E0D007EE559 /* UANavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = CCC3E15415361E0D007EE559 /* UANavigationController.m */; };
 		CCDC21DC15348EBF00EAD1BF /* UATableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CCDC21DA15348EBF00EAD1BF /* UATableViewController.m */; };
 		CCDC21E01534915900EAD1BF /* UAView.m in Sources */ = {isa = PBXBuildFile; fileRef = CCDC21DF1534915900EAD1BF /* UAView.m */; };
-		CCDC21E51534A22300EAD1BF /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CCDC21E41534A22300EAD1BF /* QuartzCore.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,7 +43,6 @@
 		CCDC21DA15348EBF00EAD1BF /* UATableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UATableViewController.m; sourceTree = "<group>"; };
 		CCDC21DE1534915900EAD1BF /* UAView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UAView.h; sourceTree = "<group>"; };
 		CCDC21DF1534915900EAD1BF /* UAView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UAView.m; sourceTree = "<group>"; };
-		CCDC21E41534A22300EAD1BF /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,7 +50,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CCDC21E51534A22300EAD1BF /* QuartzCore.framework in Frameworks */,
 				CC4E0037153383BD0087DC28 /* Cocoa.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -80,7 +77,6 @@
 		CC4E0035153383BD0087DC28 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				CCDC21E41534A22300EAD1BF /* QuartzCore.framework */,
 				CC4E0036153383BD0087DC28 /* Cocoa.framework */,
 				CC4E0038153383BD0087DC28 /* Other Frameworks */,
 			);
