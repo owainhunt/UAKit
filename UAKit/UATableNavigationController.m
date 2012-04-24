@@ -103,7 +103,7 @@
 
 - (void)didSelectRowWithObject:(id)object
 {
-    UATableViewController *tvc = [self prepareTableWithObject:nil];
+    UATableViewController *tvc = [self prepareTableWithObject:object];
     [self presentTable:tvc];
 }
 

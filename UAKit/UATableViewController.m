@@ -65,7 +65,7 @@
     NSDictionary *cellDictionary = [self tableView:tableView objectValueForTableColumn:tableColumn row:row];
     cellView.titleTextField.stringValue = [cellDictionary objectForKey:@"titleString"];
     cellView.detailTextField.stringValue = [cellDictionary objectForKey:@"detailString"];
-    cellView.representedObject = [cellDictionary objectForKey:@"representedObject"];
+    cellView.representedObject = [cellDictionary objectForKey:@"representedObject"] ?: cellDictionary;
 
     return cellView;    
 }
@@ -73,7 +73,7 @@
 
 - (id)representedObjectForCellAtRow:(NSInteger)row
 {
-    return [[self.representedObject objectAtIndex:row] objectForKey:@"representedObject"];
+    return [[self.representedObject objectAtIndex:row] objectForKey:@"representedObject"] ?: [self.representedObject objectAtIndex:row];
 }
 
 
