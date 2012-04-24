@@ -78,6 +78,7 @@
     [self.viewControllers addObject:tvc];
     self.visibleViewControllerIndex += 1;
     CGRect newFrame = CGRectMake(255, 10, 245, 300);
+    [[tvc view] setAlphaValue:0];
     [[tvc view] setFrame:newFrame];
     if ([[self.view subviews] count] < 1)
     {
@@ -88,6 +89,7 @@
         [self.view addSubview:[tvc view] positioned:NSWindowAbove relativeTo:[[self.viewControllers objectAtIndex:self.visibleViewControllerIndex] view]];
     }
     newFrame.origin.x -= 245;
+    [[tvc view] animateToVisible:YES];
     [[[tvc view] animator] setFrame:newFrame];
 }
 
@@ -115,6 +117,7 @@
     UATableViewController *tvc = [self.viewControllers objectAtIndex:self.visibleViewControllerIndex];
     CGRect newFrame = tvc.view.frame;
     newFrame.origin.x += 245;
+    [tvc.view animateToVisible:NO];
     [[tvc.view animator] setFrame:newFrame];
     [self.viewControllers removeObjectAtIndex:self.visibleViewControllerIndex];
     [tvc.view performSelector:@selector(removeFromSuperview) withObject:nil afterDelay:0.5];
