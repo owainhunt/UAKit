@@ -15,7 +15,10 @@
 @property (assign) int visibleViewControllerIndex;
 @property (strong) IBOutlet NSView *containerView;
 @property (strong) IBOutlet NSView *view;
+@property (strong) NSString *nibName;
 
+- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil;
+- (void)presentInitialTable;
 - (void)tableWithIndex:(NSInteger)tableIndex;
 
 @end

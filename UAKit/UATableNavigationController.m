@@ -17,10 +17,28 @@
 @synthesize view = _view;
 
 
+- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
+{
+    if ((self = [super init]))
+    {
+        self.nibName = nibNameOrNil;
+        self.viewControllers = [NSMutableArray array];
+        self.visibleViewControllerIndex = -1;
+    }
+    
+    return self;
+}
+
+
 - (void)awakeFromNib
 {
     self.viewControllers = [NSMutableArray array];
     self.visibleViewControllerIndex = -1;
+}
+
+
+- (void)presentInitialTable
+{
     UATableViewController *tvc = [self prepareTableWithObject:nil];
     [self presentTable:tvc];
 }
@@ -28,9 +46,19 @@
 
 - (UATableViewController *)prepareTableWithObject:(id)obj
 {
-    UATableViewController *tvc = [[UATableViewController alloc] initWithNibName:@"UATableView" bundle:nil];
+    UATableViewController *tvc;
+    
+    if (self.nibName)
+    {
+        tvc = [[UATableViewController alloc] initWithNibName:self.nibName bundle:[NSBundle mainBundle]];
+    }
+    else
+    {
+        tvc = [[UATableViewController alloc] initWithNibName:@"UATableView" bundle:[NSBundle bundleForClass:[UATableNavigationController class]]];
+    }
+    
     [tvc loadView]; // Do this here so outlets are available for below
-    tvc.titleField.stringValue = @"orhunt";
+    tvc.titleField.stringValue = [obj objectForKey:@"titleString"] ?: @"orhunt";
     NSArray *array = [NSArray arrayWithObjects:
                       [NSDictionary dictionaryWithObjectsAndKeys:@"My Issues", @"titleString", @"96", @"detailString", [NSString class], @"representedObject", nil],
                       [NSDictionary dictionaryWithObjectsAndKeys:@"Repositories", @"titleString", @"12", @"detailString", nil],
