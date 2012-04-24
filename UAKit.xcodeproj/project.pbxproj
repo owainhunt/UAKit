@@ -19,6 +19,7 @@
 		CC52FEF815377EFA005A767A /* UATableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CC52FEEF15377EFA005A767A /* UATableViewController.m */; };
 		CC52FEF915377EFA005A767A /* UAView.h in Headers */ = {isa = PBXBuildFile; fileRef = CC52FEF015377EFA005A767A /* UAView.h */; };
 		CC52FEFA15377EFA005A767A /* UAView.m in Sources */ = {isa = PBXBuildFile; fileRef = CC52FEF115377EFA005A767A /* UAView.m */; };
+		CC5878311546D93700B6EDC5 /* UAShared.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CC5878301546D93700B6EDC5 /* UAShared.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +41,7 @@
 		CC52FEEF15377EFA005A767A /* UATableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UATableViewController.m; sourceTree = "<group>"; };
 		CC52FEF015377EFA005A767A /* UAView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UAView.h; sourceTree = "<group>"; };
 		CC52FEF115377EFA005A767A /* UAView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UAView.m; sourceTree = "<group>"; };
+		CC5878301546D93700B6EDC5 /* UAShared.framework */ = {isa = PBXFileReference; lastKnownFileType = file; name = UAShared.framework; path = ../UAShared/build/Release/UAShared.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +49,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CC5878311546D93700B6EDC5 /* UAShared.framework in Frameworks */,
 				CC52FECE15377953005A767A /* Cocoa.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -74,6 +77,7 @@
 		CC4E0035153383BD0087DC28 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				CC5878301546D93700B6EDC5 /* UAShared.framework */,
 				CC4E0036153383BD0087DC28 /* Cocoa.framework */,
 				CC4E0038153383BD0087DC28 /* Other Frameworks */,
 			);
@@ -93,7 +97,7 @@
 		CC52FECF15377953005A767A /* UAKit */ = {
 			isa = PBXGroup;
 			children = (
-				CC52FEFB15377F07005A767A /* UANavigationController */,
+				CC52FEFB15377F07005A767A /* UATableNavigationController */,
 				CC52FED615377953005A767A /* UAKit.h */,
 				CC52FED015377953005A767A /* Supporting Files */,
 			);
@@ -110,7 +114,7 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		CC52FEFB15377F07005A767A /* UANavigationController */ = {
+		CC52FEFB15377F07005A767A /* UATableNavigationController */ = {
 			isa = PBXGroup;
 			children = (
 				CC52FEE915377EFA005A767A /* UATableNavigationController.h */,
@@ -123,7 +127,7 @@
 				CC52FEF015377EFA005A767A /* UAView.h */,
 				CC52FEF115377EFA005A767A /* UAView.m */,
 			);
-			name = UANavigationController;
+			name = UATableNavigationController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -169,7 +173,7 @@
 			isa = PBXProject;
 			attributes = {
 				CLASSPREFIX = UA;
-				LastUpgradeCheck = 0430;
+				LastUpgradeCheck = 0440;
 				ORGANIZATIONNAME = "Owain R Hunt";
 			};
 			buildConfigurationList = CC4E002C153383BD0087DC28 /* Build configuration list for PBXProject "UAKit" */;
@@ -233,6 +237,7 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				CLANG_ENABLE_OBJC_ARC = YES;
+				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -260,6 +265,7 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				CLANG_ENABLE_OBJC_ARC = YES;
+				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -282,6 +288,7 @@
 				FRAMEWORK_VERSION = A;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "UAKit/UAKit-Prefix.pch";
+				HEADER_SEARCH_PATHS = "$(SRCROOT)/../**";
 				INFOPLIST_FILE = "UAKit/UAKit-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = framework;
@@ -296,6 +303,7 @@
 				FRAMEWORK_VERSION = A;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "UAKit/UAKit-Prefix.pch";
+				HEADER_SEARCH_PATHS = "$(SRCROOT)/../**";
 				INFOPLIST_FILE = "UAKit/UAKit-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = framework;
