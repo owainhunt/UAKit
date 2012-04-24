@@ -7,6 +7,6 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "UANavigationController.h"
+#import "UATableNavigationController.h"
 #import "UATableViewCell.h"
 #import "UATableViewController.h"
