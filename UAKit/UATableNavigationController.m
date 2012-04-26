@@ -79,18 +79,14 @@
     [self.viewControllers addObject:tvc];
     self.visibleViewControllerIndex += 1;
     
-    CGRect newFrame;
+    CGRect currentFrame = self.view.frame;
+    [[tvc view] setFrame:currentFrame];
+ 
     if (animated)
-    {
-        newFrame = CGRectMake(245, 0, 245, 300);
+    {        
         [[tvc view] setAlphaValue:0];
     }
-    else
-    {
-        newFrame = CGRectMake(0, 0, 245, 300);
-    }    
-    [[tvc view] setFrame:newFrame];
-    
+       
     if ([[self.view subviews] count] < 1)
     {
         [self.view addSubview:[tvc view]];
@@ -102,9 +98,11 @@
 
     if (animated)
     {
-        newFrame.origin.x -= 245;
+        CGRect animationStartingPositionFrame = currentFrame;
+        animationStartingPositionFrame.origin.x += currentFrame.size.width;
+        [[tvc view] setFrame:animationStartingPositionFrame];
         [[tvc view] animateToVisible:YES];
-        [[[tvc view] animator] setFrame:newFrame];
+        [[[tvc view] animator] setFrame:currentFrame];
     }
 
     [tvc.view setTranslatesAutoresizingMaskIntoConstraints:NO];
