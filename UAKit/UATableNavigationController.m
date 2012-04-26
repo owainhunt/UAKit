@@ -40,7 +40,7 @@
 - (void)presentInitialTable
 {
     UATableViewController *tvc = [self prepareTableWithObject:nil];
-    [self presentTable:tvc];
+    [self presentTable:tvc animated:NO];
 }
 
 
@@ -58,6 +58,7 @@
     }
     
     [tvc loadView]; // Do this here so outlets are available for below
+
     tvc.titleField.stringValue = [obj objectForKey:@"titleString"] ?: @"orhunt";
     NSArray *array = [NSArray arrayWithObjects:
                       [NSDictionary dictionaryWithObjectsAndKeys:@"My Issues", @"titleString", @"96", @"detailString", [NSString class], @"representedObject", nil],
@@ -73,13 +74,23 @@
 }
 
 
-- (void)presentTable:(UATableViewController *)tvc
+- (void)presentTable:(UATableViewController *)tvc animated:(BOOL)animated
 {
     [self.viewControllers addObject:tvc];
     self.visibleViewControllerIndex += 1;
-    CGRect newFrame = CGRectMake(255, 10, 245, 300);
-    [[tvc view] setAlphaValue:0];
+    
+    CGRect newFrame;
+    if (animated)
+    {
+        newFrame = CGRectMake(245, 0, 245, 300);
+        [[tvc view] setAlphaValue:0];
+    }
+    else
+    {
+        newFrame = CGRectMake(0, 0, 245, 300);
+    }    
     [[tvc view] setFrame:newFrame];
+    
     if ([[self.view subviews] count] < 1)
     {
         [self.view addSubview:[tvc view]];
@@ -88,23 +99,32 @@
     {
         [self.view addSubview:[tvc view] positioned:NSWindowAbove relativeTo:[[self.viewControllers objectAtIndex:self.visibleViewControllerIndex] view]];
     }
-    newFrame.origin.x -= 245;
-    [[tvc view] animateToVisible:YES];
-    [[[tvc view] animator] setFrame:newFrame];
+
+    if (animated)
+    {
+        newFrame.origin.x -= 245;
+        [[tvc view] animateToVisible:YES];
+        [[[tvc view] animator] setFrame:newFrame];
+    }
+
+    [tvc.view setTranslatesAutoresizingMaskIntoConstraints:NO];
+    NSDictionary *viewsDictionary = @{ @"tvcView" : tvc.view };
+    [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"|-0-[tvcView]-0-|" options:0 metrics:nil views:viewsDictionary]];
+    [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-0-[tvcView]-0-|" options:0 metrics:nil views:viewsDictionary]];
 }
 
 
 - (void)tableWithIndex:(NSInteger)tableIndex
 {
     UATableViewController *tvc = [self prepareTableWithObject:nil];
-    [self presentTable:tvc];
+    [self presentTable:tvc animated:YES];
 }
 
 
 - (void)didSelectRowWithObject:(id)object
 {
     UATableViewController *tvc = [self prepareTableWithObject:object];
-    [self presentTable:tvc];
+    [self presentTable:tvc animated:YES];
 }
 
 
