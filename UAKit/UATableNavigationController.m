@@ -132,9 +132,16 @@
     {
         return;
     }
+    
     UATableViewController *tvc = [self.viewControllers objectAtIndex:self.visibleViewControllerIndex];
+
     CGRect newFrame = tvc.view.frame;
-    newFrame.origin.x += 245;
+    for (UATableViewController *controller in self.viewControllers)
+    {
+        controller.view.frame = newFrame;
+    }
+    
+    newFrame.origin.x += tvc.view.frame.size.width;
     [tvc.view animateToVisible:NO];
     [[tvc.view animator] setFrame:newFrame];
     [self.viewControllers removeObjectAtIndex:self.visibleViewControllerIndex];
