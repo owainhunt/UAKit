@@ -19,6 +19,8 @@
 @property (strong) id displayedObject;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil;
+- (id)prepareTableWithObject:(id)obj title:(NSString *)title;
+- (void)presentTable:(UATableViewController *)tvc animated:(BOOL)animated;
 - (void)presentInitialTable;
 - (void)tableWithIndex:(NSInteger)tableIndex;
 

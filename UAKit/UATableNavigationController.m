@@ -10,6 +10,12 @@
 #import "UATableViewController.h"
 
 #define ANIMATION_FACTOR 3
+#define DEFAULT_NAVIGATION_TITLE @"orhunt"
+
+@interface UATableNavigationController (Private)
+
+
+@end
 
 @implementation UATableNavigationController
 
@@ -41,37 +47,16 @@
 
 - (void)presentInitialTable
 {
-    UATableViewController *tvc = [self prepareTableWithObject:nil];
+    UATableViewController *tvc = [self prepareTableWithObject:nil title:nil];
     [self presentTable:tvc animated:NO];
 }
 
 
-- (UATableViewController *)prepareTableWithObject:(id)obj
+- (id)prepareTableWithObject:(id)obj title:(NSString *)title
 {
-    UATableViewController *tvc;
-    
-    if (self.nibName)
-    {
-        tvc = [[UATableViewController alloc] initWithNibName:self.nibName bundle:[NSBundle mainBundle]];
-    }
-    else
-    {
-        tvc = [[UATableViewController alloc] initWithNibName:@"UATableView" bundle:[NSBundle bundleForClass:[UATableNavigationController class]]];
-    }
-    
-    [tvc loadView]; // Do this here so outlets are available for below
-
-    tvc.titleField.stringValue = [obj objectForKey:@"titleString"] ?: @"orhunt";
-    NSArray *array = [NSArray arrayWithObjects:
-                      [NSDictionary dictionaryWithObjectsAndKeys:@"My Issues", @"titleString", @"96", @"detailString", [NSString class], @"representedObject", nil],
-                      [NSDictionary dictionaryWithObjectsAndKeys:@"Repositories", @"titleString", @"12", @"detailString", nil],
-                      [NSDictionary dictionaryWithObjectsAndKeys:@"Milestones", @"titleString", @"1", @"detailString", nil],
-                      [NSDictionary dictionaryWithObjectsAndKeys:@"Pull Requests", @"titleString", @"", @"detailString", nil],
-                      [NSDictionary dictionaryWithObjectsAndKeys:@"Log", @"titleString", @"371", @"detailString", nil],
-                      nil];
-    tvc.representedObject = array;
-    //    tvc.representedObject = obj;
-    tvc.delegate = self;
+    UATableViewController *tvc = [[UATableViewController alloc] initWithNavigationController:self];
+    tvc.titleField.stringValue = title ?: DEFAULT_NAVIGATION_TITLE;
+    [tvc setRepresentedObject:[obj copy]];
     return tvc;
 }
 
@@ -135,14 +120,14 @@
 
 - (void)tableWithIndex:(NSInteger)tableIndex
 {
-    UATableViewController *tvc = [self prepareTableWithObject:nil];
+    UATableViewController *tvc = [self prepareTableWithObject:nil title:nil];
     [self presentTable:tvc animated:YES];
 }
 
 
 - (void)didSelectRowWithObject:(id)object
 {
-    UATableViewController *tvc = [self prepareTableWithObject:object];
+    UATableViewController *tvc = [self prepareTableWithObject:object title:nil];
     [self presentTable:tvc animated:YES];
 }
 
