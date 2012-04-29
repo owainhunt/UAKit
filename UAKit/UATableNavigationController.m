@@ -9,6 +9,8 @@
 #import "UATableNavigationController.h"
 #import "UATableViewController.h"
 
+#define ANIMATION_FACTOR 3
+
 @implementation UATableNavigationController
 
 @synthesize viewControllers = _viewControllers;
@@ -78,6 +80,12 @@
 {
     [self.viewControllers addObject:tvc];
     self.visibleViewControllerIndex += 1;
+    UATableViewController *currentTVC;
+    
+    if (self.visibleViewControllerIndex > 0)
+    {
+        currentTVC = [self.viewControllers objectAtIndex:self.visibleViewControllerIndex - 1];
+    }
     
     CGRect currentFrame = self.view.frame;
     [[tvc view] setFrame:currentFrame];
@@ -98,11 +106,23 @@
 
     if (animated)
     {
+        CGRect currentTVCEndPositionFrame = currentFrame;
+        currentTVCEndPositionFrame.origin.x -= currentFrame.size.width/ANIMATION_FACTOR;
+
         CGRect animationStartingPositionFrame = currentFrame;
-        animationStartingPositionFrame.origin.x += currentFrame.size.width;
+        animationStartingPositionFrame.origin.x += currentFrame.size.width/ANIMATION_FACTOR;
         [[tvc view] setFrame:animationStartingPositionFrame];
-        [[tvc view] animateToVisible:YES];
+        
+        [NSAnimationContext beginGrouping];
+        [[NSAnimationContext currentContext] setDuration:0.4];
+        [[currentTVC.view animator] setFrame:currentTVCEndPositionFrame];
+        [currentTVC.view animateToVisible:NO];
+        [NSAnimationContext beginGrouping];
+        [[NSAnimationContext currentContext] setDuration:0.2];
         [[[tvc view] animator] setFrame:currentFrame];
+        [[tvc view] animateToVisible:YES];
+        [NSAnimationContext endGrouping];
+        [NSAnimationContext endGrouping];
     }
 
     [tvc.view setTranslatesAutoresizingMaskIntoConstraints:NO];
@@ -134,19 +154,36 @@
         return;
     }
     
-    UATableViewController *tvc = [self.viewControllers objectAtIndex:self.visibleViewControllerIndex];
+    UATableViewController *currentTVC = [self.viewControllers objectAtIndex:self.visibleViewControllerIndex];
+    UATableViewController *nextTVC = [self.viewControllers objectAtIndex:self.visibleViewControllerIndex - 1];
 
-    CGRect newFrame = tvc.view.frame;
+    CGRect currentTVCStartPositionFrame = currentTVC.view.frame;
+    CGRect currentTVCEndPositionFrame = currentTVC.view.frame;
+    currentTVCEndPositionFrame.origin.x += currentTVC.view.frame.size.width/ANIMATION_FACTOR;
+
     for (UATableViewController *controller in self.viewControllers)
     {
-        controller.view.frame = newFrame;
+        controller.view.frame = currentTVCStartPositionFrame;
     }
     
-    newFrame.origin.x += tvc.view.frame.size.width;
-    [tvc.view animateToVisible:NO];
-    [[tvc.view animator] setFrame:newFrame];
+    CGRect nextTVCFrame = nextTVC.view.frame;
+    nextTVCFrame.origin.x -= currentTVC.view.frame.size.width/ANIMATION_FACTOR;
+    [nextTVC.view setFrame:nextTVCFrame];
+    
+    [NSAnimationContext beginGrouping];
+    [[NSAnimationContext currentContext] setDuration:0.2];
+    [[nextTVC.view animator] setFrame:currentTVCStartPositionFrame];
+    [nextTVC.view animateToVisible:YES];
+    
+    [NSAnimationContext beginGrouping];
+    [[NSAnimationContext currentContext] setDuration:0.2];
+    [currentTVC.view animateToVisible:NO];
+    [[currentTVC.view animator] setFrame:currentTVCEndPositionFrame];
+    [NSAnimationContext endGrouping];
+    [NSAnimationContext endGrouping];
+
     [self.viewControllers removeObjectAtIndex:self.visibleViewControllerIndex];
-    [tvc.view performSelector:@selector(removeFromSuperview) withObject:nil afterDelay:0.5];
+    [currentTVC.view performSelector:@selector(removeFromSuperview) withObject:nil afterDelay:0.5];
     self.visibleViewControllerIndex -= 1;
 }
 
