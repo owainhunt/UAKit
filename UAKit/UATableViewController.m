@@ -8,6 +8,7 @@
 
 #import "UATableViewController.h"
 #import "UATableViewCell.h"
+#import "UATableNavigationController.h"
 
 @interface UATableViewController ()
 
@@ -69,13 +70,12 @@
 
 - (NSInteger)numberOfRowsInTableView:(NSTableView *)tableView
 {
-    return [self.representedObject count];
+    return [[self representedObject] count];
 }
-
 
 - (id)tableView:(NSTableView *)tableView objectValueForTableColumn:(NSTableColumn *)tableColumn row:(NSInteger)row
 {
-    return [self.representedObject objectAtIndex:row];
+    return [[self representedObject] objectAtIndex:row];
 }
 
 
@@ -94,12 +94,6 @@
 - (id)representedObjectForCellAtRow:(NSInteger)row
 {
     return [[self.representedObject objectAtIndex:row] objectForKey:@"representedObject"] ?: [self.representedObject objectAtIndex:row];
-}
-
-
-- (void)tableViewSelectionDidChange:(NSNotification *)notification
-{
-    //[self.delegate didSelectRowWithObject:[self representedObjectForCellAtRow:self.tableView.selectedRow]];
 }
 
 
