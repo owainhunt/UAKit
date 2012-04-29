@@ -109,6 +109,7 @@
     NSDictionary *viewsDictionary = @{ @"tvcView" : tvc.view };
     [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"|-0-[tvcView]-0-|" options:0 metrics:nil views:viewsDictionary]];
     [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-0-[tvcView]-0-|" options:0 metrics:nil views:viewsDictionary]];
+    self.displayedObject = tvc.representedObject;
 }
 
 

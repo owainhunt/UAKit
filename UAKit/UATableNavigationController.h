@@ -16,6 +16,7 @@
 @property (strong) IBOutlet NSView *containerView;
 @property (strong) IBOutlet NSView *view;
 @property (strong) NSString *nibName;
+@property (strong) id displayedObject;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil;
 - (void)presentInitialTable;
