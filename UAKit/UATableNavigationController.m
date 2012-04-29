@@ -13,7 +13,7 @@
 
 @synthesize viewControllers = _viewControllers;
 @synthesize visibleViewControllerIndex = _visibleViewControllerIndex;
-@synthesize containerView = _containerView;
+//@synthesize containerView = _containerView;
 @synthesize view = _view;
 
 

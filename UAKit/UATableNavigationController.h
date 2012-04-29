@@ -13,7 +13,7 @@
 
 @property (strong) NSMutableArray *viewControllers;
 @property (assign) int visibleViewControllerIndex;
-@property (strong) IBOutlet NSView *containerView;
+//@property (strong) IBOutlet NSView *containerView;
 @property (strong) IBOutlet NSView *view;
 @property (strong) NSString *nibName;
 @property (strong) id displayedObject;
