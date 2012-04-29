@@ -7,6 +7,7 @@
 //
 
 #import <Cocoa/Cocoa.h>
+@class UATableNavigationController;
 
 @protocol UATableViewControllerDelegate <NSObject>
 
@@ -22,6 +23,7 @@
 @property (strong) IBOutlet NSTextField *titleField;
 @property (strong) IBOutlet NSButton *backButton;
 
+- (id)initWithNavigationController:(UATableNavigationController *)tnc;
 - (IBAction)backButtonPressed:(id)sender;
 
 @end

@@ -31,6 +31,26 @@
 }
 
 
+- (id)initWithNavigationController:(UATableNavigationController *)tnc
+{
+    if (tnc.nibName)
+    {
+        self = [self initWithNibName:self.nibName bundle:[NSBundle mainBundle]];
+    }
+    else
+    {
+        self = [self initWithNibName:@"UATableView" bundle:[NSBundle bundleForClass:[UATableNavigationController class]]];
+    }
+    
+    if (self)
+    {
+        [self loadView];
+        self.delegate = tnc;
+    }
+    return self;
+}
+
+
 - (void)loadView
 {
     [super loadView];
