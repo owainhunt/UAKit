@@ -8,10 +8,14 @@
 
 #import <Cocoa/Cocoa.h>
 @class UATableNavigationController;
+@class UATableViewCell;
 
 @protocol UATableViewControllerDelegate <NSObject>
 
+@optional
 - (void)didSelectRowWithObject:(id)obj;
+- (void)didSelectCell:(UATableViewCell *)cell;
+- (void)didDoubleClickCell:(UATableViewCell *)cell;
 - (void)popTableView;
 
 @end
@@ -25,5 +29,6 @@
 
 - (id)initWithNavigationController:(UATableNavigationController *)tnc;
 - (IBAction)backButtonPressed:(id)sender;
+
 
 @end
