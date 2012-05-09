@@ -11,7 +11,6 @@
 @implementation UATableViewCell
 
 @synthesize titleTextField = _titleTextField;
-@synthesize detailTextField = _detailTextField;
 @synthesize representedObject = _representedObject;
 
 - (id)initWithFrame:(NSRect)frame

@@ -84,7 +84,6 @@
     UATableViewCell *cellView = [tableView makeViewWithIdentifier:@"MyView" owner:self];
     NSDictionary *cellDictionary = [self tableView:tableView objectValueForTableColumn:tableColumn row:row];
     cellView.titleTextField.stringValue = [cellDictionary objectForKey:@"titleString"];
-    cellView.detailTextField.stringValue = [cellDictionary objectForKey:@"detailString"];
     cellView.representedObject = [cellDictionary objectForKey:@"representedObject"] ?: cellDictionary;
 
     return cellView;    

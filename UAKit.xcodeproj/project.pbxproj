@@ -20,6 +20,8 @@
 		CC52FEF915377EFA005A767A /* UAView.h in Headers */ = {isa = PBXBuildFile; fileRef = CC52FEF015377EFA005A767A /* UAView.h */; };
 		CC52FEFA15377EFA005A767A /* UAView.m in Sources */ = {isa = PBXBuildFile; fileRef = CC52FEF115377EFA005A767A /* UAView.m */; };
 		CC5878311546D93700B6EDC5 /* UAShared.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CC5878301546D93700B6EDC5 /* UAShared.framework */; };
+		CCC6F50F155B1441008E5082 /* UABadgedTableViewCell.h in Headers */ = {isa = PBXBuildFile; fileRef = CCC6F50D155B1441008E5082 /* UABadgedTableViewCell.h */; };
+		CCC6F510155B1441008E5082 /* UABadgedTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CCC6F50E155B1441008E5082 /* UABadgedTableViewCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,7 +43,9 @@
 		CC52FEEF15377EFA005A767A /* UATableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UATableViewController.m; sourceTree = "<group>"; };
 		CC52FEF015377EFA005A767A /* UAView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UAView.h; sourceTree = "<group>"; };
 		CC52FEF115377EFA005A767A /* UAView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UAView.m; sourceTree = "<group>"; };
-		CC5878301546D93700B6EDC5 /* UAShared.framework */ = {isa = PBXFileReference; lastKnownFileType = file; name = UAShared.framework; path = ../UAShared/build/Release/UAShared.framework; sourceTree = "<group>"; };
+		CC5878301546D93700B6EDC5 /* UAShared.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UAShared.framework; path = ../UAShared/build/Release/UAShared.framework; sourceTree = "<group>"; };
+		CCC6F50D155B1441008E5082 /* UABadgedTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UABadgedTableViewCell.h; sourceTree = "<group>"; };
+		CCC6F50E155B1441008E5082 /* UABadgedTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UABadgedTableViewCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,6 +126,8 @@
 				CC52FEEB15377EFA005A767A /* UATableView.xib */,
 				CC52FEEC15377EFA005A767A /* UATableViewCell.h */,
 				CC52FEED15377EFA005A767A /* UATableViewCell.m */,
+				CCC6F50D155B1441008E5082 /* UABadgedTableViewCell.h */,
+				CCC6F50E155B1441008E5082 /* UABadgedTableViewCell.m */,
 				CC52FEEE15377EFA005A767A /* UATableViewController.h */,
 				CC52FEEF15377EFA005A767A /* UATableViewController.m */,
 				CC52FEF015377EFA005A767A /* UAView.h */,
@@ -142,6 +148,7 @@
 				CC52FEF515377EFA005A767A /* UATableViewCell.h in Headers */,
 				CC52FEF715377EFA005A767A /* UATableViewController.h in Headers */,
 				CC52FEF915377EFA005A767A /* UAView.h in Headers */,
+				CCC6F50F155B1441008E5082 /* UABadgedTableViewCell.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -214,6 +221,7 @@
 				CC52FEF615377EFA005A767A /* UATableViewCell.m in Sources */,
 				CC52FEF815377EFA005A767A /* UATableViewController.m in Sources */,
 				CC52FEFA15377EFA005A767A /* UAView.m in Sources */,
+				CCC6F510155B1441008E5082 /* UABadgedTableViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

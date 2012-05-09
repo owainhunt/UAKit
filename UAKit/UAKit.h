@@ -9,4 +9,5 @@
 #import <Foundation/Foundation.h>
 #import "UATableNavigationController.h"
 #import "UATableViewCell.h"
+#import "UABadgedTableViewCell.h"
 #import "UATableViewController.h"

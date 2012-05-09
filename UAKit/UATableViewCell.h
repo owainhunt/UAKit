@@ -11,7 +11,6 @@
 @interface UATableViewCell : NSTableCellView
 
 @property IBOutlet NSTextField *titleTextField;
-@property IBOutlet NSTextField *detailTextField;
 @property id representedObject;
 
 @end
