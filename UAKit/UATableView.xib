@@ -187,6 +187,7 @@
 								<string key="NSFrame">{{1, 306}, {238, 15}}</string>
 								<reference key="NSSuperview" ref="1047457108"/>
 								<reference key="NSWindow"/>
+								<reference key="NSNextKeyView"/>
 								<string key="NSReuseIdentifierKey">_NS:60</string>
 								<int key="NSsFlags">1</int>
 								<reference key="NSTarget" ref="1047457108"/>
@@ -273,7 +274,7 @@
 						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView" ref="768780072"/>
 						<string key="NSReuseIdentifierKey">_NS:9</string>
-						<string key="NSClassName">NSView</string>
+						<string key="NSClassName">UATableNavigationBar</string>
 					</object>
 				</array>
 				<string key="NSFrameSize">{244, 372}</string>
@@ -324,6 +325,14 @@
 						<reference key="destination" ref="768780072"/>
 					</object>
 					<int key="connectionID">64</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBOutletConnection" key="connection">
+						<string key="label">headerContainerView</string>
+						<reference key="source" ref="1001"/>
+						<reference key="destination" ref="920869417"/>
+					</object>
+					<int key="connectionID">125</int>
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBOutletConnection" key="connection">
@@ -948,7 +957,7 @@
 			<nil key="activeLocalization"/>
 			<dictionary class="NSMutableDictionary" key="localizations"/>
 			<nil key="sourceID"/>
-			<int key="maxID">124</int>
+			<int key="maxID">125</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<array class="NSMutableArray" key="referencedPartialClassDescriptions">
@@ -958,6 +967,14 @@
 					<object class="IBClassDescriptionSource" key="sourceIdentifier">
 						<string key="majorKey">IBProjectSource</string>
 						<string key="minorKey">./Classes/NSLayoutConstraint.h</string>
+					</object>
+				</object>
+				<object class="IBPartialClassDescription">
+					<string key="className">UATableNavigationBar</string>
+					<string key="superclassName">NSView</string>
+					<object class="IBClassDescriptionSource" key="sourceIdentifier">
+						<string key="majorKey">IBProjectSource</string>
+						<string key="minorKey">./Classes/UATableNavigationBar.h</string>
 					</object>
 				</object>
 				<object class="IBPartialClassDescription">
@@ -995,6 +1012,7 @@
 					</object>
 					<dictionary class="NSMutableDictionary" key="outlets">
 						<string key="backButton">NSButton</string>
+						<string key="headerContainerView">NSView</string>
 						<string key="tableView">NSTableView</string>
 						<string key="titleField">NSTextField</string>
 					</dictionary>
@@ -1002,6 +1020,10 @@
 						<object class="IBToOneOutletInfo" key="backButton">
 							<string key="name">backButton</string>
 							<string key="candidateClassName">NSButton</string>
+						</object>
+						<object class="IBToOneOutletInfo" key="headerContainerView">
+							<string key="name">headerContainerView</string>
+							<string key="candidateClassName">NSView</string>
 						</object>
 						<object class="IBToOneOutletInfo" key="tableView">
 							<string key="name">tableView</string>
