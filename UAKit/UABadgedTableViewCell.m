@@ -24,12 +24,22 @@
 - (void)drawRect:(NSRect)dirtyRect
 {
     // Drawing code here.
+        
     if (self.badgeString)
     {
         CGSize badgeSize = [self sizeOfBadgeWithString:self.badgeString];
         CGRect rect = [self frame];
-        CGRect badgeRect = NSMakeRect(NSMaxX(rect) - badgeSize.width - 10, NSMidY(rect)-(badgeSize.height/2.0), badgeSize.width, badgeSize.height);
+        CGRect badgeRect = NSMakeRect(NSMaxX(rect) - badgeSize.width - 8, NSMidY(rect)-(badgeSize.height/2.0), badgeSize.width, badgeSize.height);
         [self drawBadgeInRect:badgeRect];
+        NSDictionary *viewsDictionary = @{ @"titleTextField" : self.titleTextField };
+        NSDictionary *metricsDictionary = @{ @"rightInset" : [NSNumber numberWithFloat:badgeSize.width+12] };
+        [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"|-8-[titleTextField]-rightInset-|" options:0 metrics:metricsDictionary views:viewsDictionary]];
+    }
+    
+    else
+    {
+        NSDictionary *viewsDictionary = @{ @"titleTextField" : self.titleTextField };
+        [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"|-8-[titleTextField]-8-|" options:0 metrics:nil views:viewsDictionary]];
     }
 }
 
@@ -40,8 +50,8 @@
     [paragStyle setAlignment:NSCenterTextAlignment];
     NSAttributedString *badgeAttrString = [[NSAttributedString alloc] initWithString:badgeString attributes:
                                            @{ NSParagraphStyleAttributeName : paragStyle,
-                                                                NSFontAttributeName : [NSFont boldSystemFontOfSize:11],
-                                                     NSForegroundColorAttributeName : [NSColor whiteColor]
+                                                        NSFontAttributeName : [NSFont boldSystemFontOfSize:11],
+                                             NSForegroundColorAttributeName : [NSColor whiteColor]
                                            }
                                            ];
     CGSize badgeSize = [badgeAttrString size];
@@ -57,8 +67,8 @@
     [paragStyle setAlignment:NSCenterTextAlignment];
     NSAttributedString *badgeAttrString = [[NSAttributedString alloc] initWithString:self.badgeString attributes:
                                            @{ NSParagraphStyleAttributeName : paragStyle,
-                                                                NSFontAttributeName : [NSFont boldSystemFontOfSize:11],
-                                                     NSForegroundColorAttributeName : (self.badgeColor) ?: [NSColor whiteColor]
+                                                        NSFontAttributeName : [NSFont boldSystemFontOfSize:11],
+                                             NSForegroundColorAttributeName : (self.badgeColor) ?: [NSColor whiteColor]
                                            }
                                            ];
     
