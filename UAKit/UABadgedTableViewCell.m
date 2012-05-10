@@ -73,7 +73,7 @@
     }
     else
     {
-        [[NSColor blueColor] set];
+        [[NSColor colorWithCalibratedRed:0.6 green:0.65 blue:0.7 alpha:1.0] set];
     }
     [path fill];
     
