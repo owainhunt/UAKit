@@ -15,6 +15,7 @@
     self = [super initWithFrame:frame];
     if (self) {
         // Initialization code here.
+        self.translatesAutoresizingMaskIntoConstraints = NO;
     }
     
     return self;
@@ -24,77 +25,32 @@
 - (void)drawRect:(NSRect)dirtyRect
 {
     // Drawing code here.
+    if (self.hasDisclosureIndicator)
+    {
+        [self.disclosureImageView setHidden:NO];
+    }
         
     if (self.badgeString)
     {
-        CGSize badgeSize = [self sizeOfBadgeWithString:self.badgeString];
+        CGSize badgeSize = [self sizeOfBadgeWithString:self.badgeString font:nil];
         CGRect rect = [self frame];
-        CGRect badgeRect = NSMakeRect(NSMaxX(rect) - badgeSize.width - 8, NSMidY(rect)-(badgeSize.height/2.0), badgeSize.width, badgeSize.height);
-        [self drawBadgeInRect:badgeRect];
+        CGRect badgeRect = NSMakeRect(NSMaxX(rect) - badgeSize.width - 8, NSMidY(rect)-(badgeSize.height/2.0)-2, badgeSize.width, badgeSize.height);
+        CGFloat rightInset = badgeSize.width + 12;
+        if (self.hasDisclosureIndicator)
+        {
+            badgeRect.origin.x -= 12;
+            rightInset += 12;
+        }
+        [self drawBadgeInRect:badgeRect withString:self.badgeString foregroundColor:self.badgeColor backgroundColor:self.badgeBackgroundColor font:nil];
         NSDictionary *viewsDictionary = @{ @"titleTextField" : self.titleTextField };
-        NSDictionary *metricsDictionary = @{ @"rightInset" : [NSNumber numberWithFloat:badgeSize.width+12] };
+        NSDictionary *metricsDictionary = @{ @"rightInset" : [NSNumber numberWithFloat:abs(rightInset)] };
         [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"|-8-[titleTextField]-rightInset-|" options:0 metrics:metricsDictionary views:viewsDictionary]];
     }
-    
     else
     {
         NSDictionary *viewsDictionary = @{ @"titleTextField" : self.titleTextField };
         [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"|-8-[titleTextField]-8-|" options:0 metrics:nil views:viewsDictionary]];
     }
 }
-
-
-- (NSSize)sizeOfBadgeWithString:(NSString *)badgeString
-{
-    NSMutableParagraphStyle *paragStyle = [[NSParagraphStyle defaultParagraphStyle] mutableCopy];
-    [paragStyle setAlignment:NSCenterTextAlignment];
-    NSAttributedString *badgeAttrString = [[NSAttributedString alloc] initWithString:badgeString attributes:
-                                           @{ NSParagraphStyleAttributeName : paragStyle,
-                                                        NSFontAttributeName : [NSFont boldSystemFontOfSize:11],
-                                             NSForegroundColorAttributeName : [NSColor whiteColor]
-                                           }
-                                           ];
-    CGSize badgeSize = [badgeAttrString size];
-    CGFloat margin = 6;
-    badgeSize.width += (margin * 2);
-    return badgeSize;
-}
-
-
-- (void)drawBadgeInRect:(CGRect)badgeRect
-{
-    NSMutableParagraphStyle *paragStyle = [[NSParagraphStyle defaultParagraphStyle] mutableCopy];
-    [paragStyle setAlignment:NSCenterTextAlignment];
-    NSAttributedString *badgeAttrString = [[NSAttributedString alloc] initWithString:self.badgeString attributes:
-                                           @{ NSParagraphStyleAttributeName : paragStyle,
-                                                        NSFontAttributeName : [NSFont boldSystemFontOfSize:11],
-                                             NSForegroundColorAttributeName : (self.badgeColor) ?: [NSColor whiteColor]
-                                           }
-                                           ];
-    
-    NSGraphicsContext *context = [NSGraphicsContext currentContext];
-    [context saveGraphicsState];
-    NSBezierPath *path = [NSBezierPath bezierPathWithRoundedRect:badgeRect
-                                                         xRadius:badgeRect.size.height/2
-                                                         yRadius:badgeRect.size.height/2];
-    if (self.badgeBackgroundColor)
-    {
-        [self.badgeBackgroundColor set];
-    }
-    else
-    {
-        [[NSColor colorWithCalibratedRed:0.6 green:0.65 blue:0.7 alpha:1.0] set];
-    }
-    [path fill];
-    
-	NSSize stringSize = [badgeAttrString size];
-	NSPoint badgeTextPoint = NSMakePoint(NSMidX(badgeRect)-(stringSize.width/2.0),		//Center in the badge frame
-										 NSMidY(badgeRect)-(stringSize.height/2.0));	//Center in the badge frame
-	[badgeAttrString drawAtPoint:badgeTextPoint];
-    
-    [context restoreGraphicsState];
-    
-}
-
 
 @end

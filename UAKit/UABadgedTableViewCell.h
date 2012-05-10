@@ -13,5 +13,7 @@
 @property (strong, nonatomic) NSString *badgeString;
 @property (strong) NSColor *badgeBackgroundColor;
 @property (strong) NSColor *badgeColor;
+@property BOOL hasDisclosureIndicator;
+@property (strong) IBOutlet NSImageView *disclosureImageView;
 
 @end
