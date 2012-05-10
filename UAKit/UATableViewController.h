@@ -9,6 +9,7 @@
 #import <Cocoa/Cocoa.h>
 @class UATableNavigationController;
 @class UATableViewCell;
+@class UATableNavigationBar;
 
 @protocol UATableViewControllerDelegate <NSObject>
 
@@ -24,6 +25,7 @@
 
 @property id<UATableViewControllerDelegate> delegate;
 @property (strong) IBOutlet NSTableView *tableView;
+@property (strong) IBOutlet UATableNavigationBar *headerContainerView;
 @property (strong) IBOutlet NSTextField *titleField;
 @property (strong) IBOutlet NSButton *backButton;
 
