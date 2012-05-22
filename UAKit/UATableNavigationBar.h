@@ -7,6 +7,7 @@
 //
 
 #import <Cocoa/Cocoa.h>
+#import "UAView.h"
 
 @interface UATableNavigationBar : NSView
 
