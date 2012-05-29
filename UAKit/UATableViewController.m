@@ -36,7 +36,7 @@
 {
     if (tnc.nibName)
     {
-        self = [self initWithNibName:self.nibName bundle:[NSBundle mainBundle]];
+        self = [self initWithNibName:tnc.nibName bundle:[NSBundle mainBundle]];
     }
     else
     {
@@ -54,6 +54,10 @@
 
 - (void)loadView
 {
+    /*
+    NSNib *nib = [[NSNib alloc] initWithNibNamed:[self nibName] bundle:[self nibBundle]];
+    [nib instantiateNibWithOwner:self topLevelObjects:nil];
+     */
     [super loadView];
     [self.tableView setDataSource:self];
     [self.tableView setDelegate:self];
