@@ -21,6 +21,12 @@
     return self;
 }
 
+
+- (void)awakeFromNib
+{
+    [super awakeFromNib];
+}
+
 - (BOOL)isFlipped
 {
     return YES;
