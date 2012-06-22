@@ -62,10 +62,10 @@
 
 
 - (void)presentTable:(UATableViewController *)tvc animated:(BOOL)animated
-{
+{        
     [self.viewControllers addObject:tvc];
     self.visibleViewControllerIndex += 1;
-    UATableViewController *currentTVC;
+    UATableViewController *currentTVC = nil;
     
     if (self.visibleViewControllerIndex > 0)
     {
@@ -97,7 +97,7 @@
         CGRect animationStartingPositionFrame = currentFrame;
         animationStartingPositionFrame.origin.x += currentFrame.size.width/ANIMATION_FACTOR;
         [[tvc view] setFrame:animationStartingPositionFrame];
-        
+
         [NSAnimationContext beginGrouping];
         [[NSAnimationContext currentContext] setDuration:0.4];
         [[currentTVC.view animator] setFrame:currentTVCEndPositionFrame];
@@ -115,6 +115,7 @@
     [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"|-0-[tvcView]-0-|" options:0 metrics:nil views:viewsDictionary]];
     [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-0-[tvcView]-0-|" options:0 metrics:nil views:viewsDictionary]];
     self.displayedObject = tvc.representedObject;
+
 }
 
 
