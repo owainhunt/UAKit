@@ -59,6 +59,7 @@
     [nib instantiateNibWithOwner:self topLevelObjects:nil];
      */
     [super loadView];
+    [self.titleField.cell setBackgroundStyle:NSBackgroundStyleRaised];
     [self.tableView setDataSource:self];
     [self.tableView setDelegate:self];
     [self.tableView setTarget:self];
