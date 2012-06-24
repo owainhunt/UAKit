@@ -12,7 +12,8 @@
 
 - (void)drawRect:(NSRect)dirtyRect
 {
-    [self drawGridInClipRect:dirtyRect];
+    [[NSColor whiteColor] set];
+    NSRectFill(dirtyRect);
 }
 
 
