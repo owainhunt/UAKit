@@ -30,7 +30,7 @@
         [self.disclosureImageView setHidden:NO];
     }
         
-    if (self.badgeString)
+    if (self.badgeString && ![self.badgeString isEqualToString:@""])
     {
         CGSize badgeSize = [self sizeOfBadgeWithString:self.badgeString font:nil];
         CGRect rect = [self frame];
