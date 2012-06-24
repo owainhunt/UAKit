@@ -12,3 +12,4 @@
 #import "UABadgedTableViewCell.h"
 #import "UATableViewController.h"
 #import "UAView.h"
+#import "UATableView.h"

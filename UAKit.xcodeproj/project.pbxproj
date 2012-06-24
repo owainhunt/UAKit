@@ -20,6 +20,8 @@
 		CC52FEF915377EFA005A767A /* UAView.h in Headers */ = {isa = PBXBuildFile; fileRef = CC52FEF015377EFA005A767A /* UAView.h */; };
 		CC52FEFA15377EFA005A767A /* UAView.m in Sources */ = {isa = PBXBuildFile; fileRef = CC52FEF115377EFA005A767A /* UAView.m */; };
 		CC5878311546D93700B6EDC5 /* UAShared.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CC5878301546D93700B6EDC5 /* UAShared.framework */; };
+		CC6A51EB15972AE000D84A77 /* UATableView.h in Headers */ = {isa = PBXBuildFile; fileRef = CC6A51E915972AE000D84A77 /* UATableView.h */; };
+		CC6A51EC15972AE000D84A77 /* UATableView.m in Sources */ = {isa = PBXBuildFile; fileRef = CC6A51EA15972AE000D84A77 /* UATableView.m */; };
 		CC782DC0155C593000568F30 /* UATableNavigationBar.h in Headers */ = {isa = PBXBuildFile; fileRef = CC782DBE155C592F00568F30 /* UATableNavigationBar.h */; };
 		CC782DC1155C593000568F30 /* UATableNavigationBar.m in Sources */ = {isa = PBXBuildFile; fileRef = CC782DBF155C593000568F30 /* UATableNavigationBar.m */; };
 		CCC6F50F155B1441008E5082 /* UABadgedTableViewCell.h in Headers */ = {isa = PBXBuildFile; fileRef = CCC6F50D155B1441008E5082 /* UABadgedTableViewCell.h */; };
@@ -46,6 +48,8 @@
 		CC52FEF015377EFA005A767A /* UAView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UAView.h; sourceTree = "<group>"; };
 		CC52FEF115377EFA005A767A /* UAView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UAView.m; sourceTree = "<group>"; };
 		CC5878301546D93700B6EDC5 /* UAShared.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UAShared.framework; path = ../UAShared/build/Release/UAShared.framework; sourceTree = "<group>"; };
+		CC6A51E915972AE000D84A77 /* UATableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UATableView.h; sourceTree = "<group>"; };
+		CC6A51EA15972AE000D84A77 /* UATableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UATableView.m; sourceTree = "<group>"; };
 		CC782DBE155C592F00568F30 /* UATableNavigationBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UATableNavigationBar.h; sourceTree = "<group>"; };
 		CC782DBF155C593000568F30 /* UATableNavigationBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UATableNavigationBar.m; sourceTree = "<group>"; };
 		CCC6F50D155B1441008E5082 /* UABadgedTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UABadgedTableViewCell.h; sourceTree = "<group>"; };
@@ -125,6 +129,8 @@
 		CC52FEFB15377F07005A767A /* UATableNavigationController */ = {
 			isa = PBXGroup;
 			children = (
+				CC6A51E915972AE000D84A77 /* UATableView.h */,
+				CC6A51EA15972AE000D84A77 /* UATableView.m */,
 				CC52FEEB15377EFA005A767A /* UATableView.xib */,
 				CC52FEE915377EFA005A767A /* UATableNavigationController.h */,
 				CC52FEEA15377EFA005A767A /* UATableNavigationController.m */,
@@ -156,6 +162,7 @@
 				CC52FEF915377EFA005A767A /* UAView.h in Headers */,
 				CCC6F50F155B1441008E5082 /* UABadgedTableViewCell.h in Headers */,
 				CC782DC0155C593000568F30 /* UATableNavigationBar.h in Headers */,
+				CC6A51EB15972AE000D84A77 /* UATableView.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -230,6 +237,7 @@
 				CC52FEFA15377EFA005A767A /* UAView.m in Sources */,
 				CCC6F510155B1441008E5082 /* UABadgedTableViewCell.m in Sources */,
 				CC782DC1155C593000568F30 /* UATableNavigationBar.m in Sources */,
+				CC6A51EC15972AE000D84A77 /* UATableView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -272,6 +280,7 @@
 				MACOSX_DEPLOYMENT_TARGET = 10.7;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
 			};
 			name = Debug;
 		};
@@ -293,6 +302,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				MACOSX_DEPLOYMENT_TARGET = 10.7;
 				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
 			};
 			name = Release;
 		};
