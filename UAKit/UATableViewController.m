@@ -9,6 +9,7 @@
 #import "UATableViewController.h"
 #import "UATableViewCell.h"
 #import "UATableNavigationController.h"
+#import "UATableView.h"
 
 @interface UATableViewController ()
 

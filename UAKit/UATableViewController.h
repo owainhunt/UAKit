@@ -10,6 +10,7 @@
 @class UATableNavigationController;
 @class UATableViewCell;
 @class UATableNavigationBar;
+@class UATableView;
 
 @protocol UATableViewControllerDelegate <NSObject>
 
@@ -24,7 +25,7 @@
 @interface UATableViewController : NSViewController <NSTableViewDelegate, NSTableViewDataSource>
 
 @property id<UATableViewControllerDelegate> delegate;
-@property (strong) IBOutlet NSTableView *tableView;
+@property (strong) IBOutlet UATableView *tableView;
 @property (strong) IBOutlet UATableNavigationBar *headerContainerView;
 @property (strong) IBOutlet NSTextField *titleField;
 @property (strong) IBOutlet NSButton *backButton;
