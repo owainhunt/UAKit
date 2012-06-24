@@ -34,7 +34,8 @@
 
 - (void)drawRect:(NSRect)dirtyRect
 {
-    // Drawing code here.
+    [[NSColor whiteColor] setFill];
+    NSRectFill(dirtyRect);
 }
 
 @end
