@@ -51,11 +51,6 @@
         NSDictionary *viewsDictionary = @{ @"titleTextField" : self.titleTextField };
         [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"|-8-[titleTextField]-8-|" options:0 metrics:nil views:viewsDictionary]];
     }
-    
-    NSBezierPath *path = [NSBezierPath bezierPathWithRect:CGRectMake(0, 0, NSMaxX([self bounds]), 1)];
-    [[NSColor colorWithCalibratedRed:0.8 green:0.8 blue:0.8 alpha:1.0] set];
-    [path fill];
-
 }
 
 @end
